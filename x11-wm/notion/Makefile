@@ -2,17 +2,20 @@
 # $FreeBSD$
 
 PORTNAME=	notion
-DISTVERSIONPREFIX=	3-
-PORTVERSION=	2015061300
+PORTVERSION=	g20170912
 CATEGORIES=	x11-wm
 
-MAINTAINER=	amdmi3@FreeBSD.org
+MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Tiling tabbed window manager
+
+LICENSE=	LGPL21
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	raboof
+GH_TAGNAME=	e0ab8a2
 
-USE_XORG=	x11 xext sm
+USE_XORG=	ice sm x11 xext xft
 USES=		gettext gmake lua pkgconfig
 MAKE_ENV=	LUA_VERSION=${LUA_VER}
 
